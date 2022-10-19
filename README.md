@@ -1,7 +1,7 @@
 # Ensenable
 
-Proyecto Construcción de software Octubre 2022.
-<br>
+Proyecto Construcción de software Octubre 2022.<br>
+Hecho en ASP.NET Core MVC (.NET 6)<br>
 # Archivos:
 <ul>
   <li>Carpeta .vs: Archivos de visual studio</li>
