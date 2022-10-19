@@ -1,0 +1,180 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Ensenable
+build_property.RootNamespace = Ensenable
+build_property.ProjectDir = C:\Users\nico0\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Semestre 4\Construccion de Software\Ensenable\Ensenable\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\nico0\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Semestre 4\Construccion de Software\Ensenable\Ensenable
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/AddAct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRBY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/AddAnswer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRBbnN3ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/AddLect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRMZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/AddQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRRdWVzdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/CrearActivity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhckFjdGl2aXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/CrearCurso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhckN1cnNvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/Curso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDdXJzby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/Cursos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDdXJzb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/EditarDetallesAct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0YXJEZXRhbGxlc0FjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/EditarDetallesCurso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0YXJEZXRhbGxlc0N1cnNvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/EditarDetallesLec.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0YXJEZXRhbGxlc0xlYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/EliminarActivity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFbGltaW5hckFjdGl2aXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/Game.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/IndexApple.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleEFwcGxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/ListActivities.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0QWN0aXZpdGllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/ListLectures.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0TGVjdHVyZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/ListQuestions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0UXVlc3Rpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/ListResp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0UmVzcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/Tutorial1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUdXRvcmlhbDEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/Tutorial2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUdXRvcmlhbDIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Home/Tutorial3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUdXRvcmlhbDMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Mantenedor/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvclxFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Mantenedor/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvclxFbGltaW5hci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Mantenedor/Insertar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvclxJbnNlcnRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Mantenedor/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvclxMaXN0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Mantenedor/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Mantenedor/LoginError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvclxMb2dpbkVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-7ufv4zf2ly
+
+[C:/Users/nico0/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Semestre 4/Construccion de Software/Ensenable/Ensenable/Views/Shared/_LayoutApple.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBcHBsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-g6403iq724

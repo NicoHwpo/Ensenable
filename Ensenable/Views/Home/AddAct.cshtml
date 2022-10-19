@@ -1,0 +1,48 @@
+﻿@model Ensenable.Models.ActivityModel
+
+@{
+    ViewData["Title"] = "AddAct";
+}
+
+<h1>AddAct</h1>
+
+<h4>ActivityModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddAct" asp-controller="Home" method="post">
+            
+            <div class="form-group">
+                <label asp-for="IdLecture" class="control-label"></label>
+                <input asp-for="IdLecture" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="NameActivity" class="control-label"></label>
+                <input asp-for="NameActivity" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Instructions" class="control-label"></label>
+                <input asp-for="Instructions" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="NumQuestions" class="control-label"></label>
+                <input asp-for="NumQuestions" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="NumActivity" class="control-label"></label>
+                <input asp-for="NumActivity" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

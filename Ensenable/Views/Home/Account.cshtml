@@ -1,0 +1,340 @@
+﻿@model Ensenable.Models.UsersModel
+@using Ensenable.Datos;
+@{
+    ViewData["Title"] = "Account";
+}
+
+<section style="background-color: #eee;" >
+    <div class="container py-5">
+        <!--
+        <div class="row">
+            <div class="col">
+                <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="/Home/Index">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        -->
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+                             class="rounded-circle img-fluid" style="width: 150px;">
+                        <h5 class="my-3">@Model.user_name</h5>
+                        @if (Model.user_role == 1){
+                            <p class="text-muted mb-1">Administrador</p>
+                        }else if(Model.user_role == 2){
+                            <p class="text-muted mb-1">Maestro</p>
+                        }else{
+                            <p class="text-muted mb-1">Alumno</p>
+                        }
+                        <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                        <div class="d-flex justify-content-center mb-2">
+                            <a type="button" asp-action="EditProfile" asp-controller="Home" asp-route-id_user="@Model.id_user" class="btn btn-primary">Editar Perfil</a>
+                            <!--<button type="button" class="btn btn-outline-primary ms-1">Message</button>-->
+                        </div>
+                    </div>
+                </div>
+                
+                <!--<div class="card mb-4 mb-lg-0">
+                    <div class="card-body p-0">
+                        <ul class="list-group list-group-flush rounded-3">
+                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                <i class="fas fa-globe fa-lg text-warning"></i>
+                                <p class="mb-0">https://mdbootstrap.com</p>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                <i class="fab fa-github fa-lg" style="color: #333333;"></i>
+                                <p class="mb-0">mdbootstrap</p>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
+                                <p class="mb-0">mdbootstrap</p>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
+                                <p class="mb-0">mdbootstrap</p>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+                                <p class="mb-0">mdbootstrap</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                -->
+            </div>
+                
+            <div class="col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Nombre Completo</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">@Model.user_name @Model.user_firstlastname @Model.user_secondlastname</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Email</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">@Model.user_email</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Rol</p>
+                            </div>
+                            <div class="col-sm-9">
+                                @if (Model.user_role == 1)
+                                    {
+                                    <p class="text-muted mb-0">Administrador</p>
+                                    }
+                                    else if (Model.user_role == 2)
+                                    {
+                                    <p class="text-muted mb-0">Maestro</p>
+                                    }
+                                    else
+                                    {
+                                    <p class="text-muted mb-0">Alumno</p>
+                                    }
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Numero Telefonico</p>
+                            </div>
+                            <div class="col-sm-9">
+                                    <p class="text-muted mb-0">(81) 2723 0982</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Direccion</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">Tecnologico, Monterrey, NL.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                               <p class="mb-0">Codigo Postal</p>
+                            </div>
+                            <div class="col-sm-9">
+                               <p class="text-muted mb-0">64840</p>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+
+                <!--
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4 mb-md-0">
+                            <div class="card-body">
+                                <p class="mb-4">
+                                    <span class="text-primary font-italic me-1">assigment</span> Project Status
+                                </p>
+                                <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                                <div class="progress rounded" style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+                                <div class="progress rounded" style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
+                                <div class="progress rounded" style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
+                                <div class="progress rounded" style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
+                                <div class="progress rounded mb-2" style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card mb-4 mb-md-0">
+                            <div class="card-body">
+                                <p class="mb-4">
+                                    <span class="text-primary font-italic me-1">assigment</span> Project Status
+                                </p>
+                                <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                                <div class="progress rounded" style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+                                <div class="progress rounded" style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
+                                <div class="progress rounded" style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
+                                <div class="progress rounded" style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
+                                <div class="progress rounded mb-2" style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
+                                         aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    -->
+            </div>
+        </div>
+    </div>
+@{
+    CursoDatos cursoDatos = new CursoDatos();
+    var oLista = cursoDatos.ListarCursos();
+}
+
+@if (@Model.user_role == 3)
+    {
+        int cont = 0;
+        var oSubs = cursoDatos.ListarSubscriptions(ViewBag.Session);
+    HashSet<int> Subs = new HashSet<int>();
+        foreach (var sub in oSubs){
+        Subs.Add(sub);
+        }
+        @if(!Subs.Any()){
+            <div class="container text-center" style="padding-bottom:21.8vh">
+                <h6 class="text-danger">NO ESTAS SUBSCRITO A NINGUN CURSO</h6>
+                <a class="btn btn-primary btn-lg px-4" href="/Home/Cursos">Ver cursos</a>
+            </div>
+        }else{
+        <section class="py-5">
+            <div class="container px-5">
+                <h2 class="fw-bolder fs-5">Cursos Disponibles</h2>
+                <div class="row gx-5">
+                    @foreach (var item in oLista)
+                    {
+                        @if (item.IsPublished == "True" && Subs.Contains(item.IdCourse))
+                        {
+                            <div class="col-lg-4 mb-5">
+                                <div class="card h-100 shadow border-0">
+                                    <div id="btn_modal_curso_cursos">
+                                        <img class="card-img-top" src="~/images/c_default.png" alt="..." />
+                                            <a style="text-decoration:none; background-color:#D0312D !important" asp-action="DesubscribirseCurso" asp-controller="Home" asp-route-IdCourse="@item.IdCourse" class="btn-sm"><i class="bi bi-plus-lg"></i> Desubscribirse</a>
+                                    </div>
+                                    <div class="card-body p-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">@item.Subject </div>
+                                        <a class="text-decoration-none link-dark" href="#"><h5 class="card-title mb-3">@item.NameCourse </h5></a>
+                                        <p class="card-text mb-0">@item.Description </p>
+                                    </div>
+
+                                    <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                        <div class="d-flex align-items-end justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <img class="rounded-circle me-3" src="~/images/a_default.png" alt="..." />
+                                                <div class="small">
+                                                    <div class="fw-bold">@item.Author </div>
+                                                    <div class="text-muted">@item.ReleaseDate </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container" style="padding-bottom: 1rem">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <a asp-action="Curso" class="btn btn-danger" asp-controller="Home" asp-route-IdCourse="@item.IdCourse">Ver Curso</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            }else{
+                                cont += 1;
+                            }
+                    }
+                    @if(cont == oLista.Count()){
+                            <div class="container text-center" style="padding-bottom:21vh">
+                                <h6 class="text-danger">NO ESTAS SUBSCRITO A NINGUN CURSO</h6>
+                                <a class="btn btn-primary btn-lg px-4" href="/Home/Cursos">Ver cursos</a>
+                            </div>
+                    }
+                </div>
+            </div>
+        </section>
+        }
+    }
+    else if (@Model.user_role == 2){
+        <section style="padding-bottom:23.1vh !important" class="py-3" id="MisCursosPublicados">
+            <div class="container px-5">
+                <h2 class="fw-bolder fs-5 mb-4">Lista de Cursos Publicados</h2>
+                <div class="row gx-5">
+                    <!--Aqui van los cursos el for each, Este es solo un ejemplo-->
+                    @foreach (var item in oLista)
+                    {
+                        @if (item.IsPublished == "True" && item.id_user == ViewBag.Session)
+                        {
+                            <div class="col-lg-4 mb-5">
+                                <div class="card h-100 shadow border-0">
+                                    <img class="card-img-top" src="~/images/c_default.png" alt="..." />
+                                    <div class="card-body p-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">@item.Subject </div>
+                                        <a class="text-decoration-none link-dark" href="#"><h5 class="card-title mb-3">@item.NameCourse </h5></a>
+                                        <p class="card-text mb-0">@item.Description </p>
+                                    </div>
+                                    <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                        <div class="d-flex align-items-end justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <img class="rounded-circle me-3" src="~/images/a_default.png" alt="..." />
+                                                <div class="small">
+                                                    <div class="fw-bold">@item.Author </div>
+                                                    <div class="text-muted">@item.ReleaseDate </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container" style="padding-bottom: 1rem">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <a asp-action="DesPublicarCurso" class="btn btn-danger" asp-controller="Home" asp-route-IdCourse="@item.IdCourse" onclick="return confirm('¿Confirma Deshacer la Publicación?')">Despublicar Curso</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+
+                    <div class="container text-center" >
+                        <a class="btn btn-primary btn-lg px-4" href="/Home/Cursos">Publicar Cursos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+</section>

@@ -1,0 +1,117 @@
+﻿@model Ensenable.Models.UsersModel
+@{
+    ViewData["Title"] = "Edit Profile";
+}
+<div class="container" style=" height:83.7vh">
+
+    <h1>Editar Perfil</h1>
+
+    <hr />
+    <div>
+        <a asp-action="Account" asp-controller="Home">Regresar</a>
+    </div>
+    <div class="row text-center">
+            <div class="col"></div>
+        <div class="col-md-4">
+            <form  asp-action="EditProfile" asp-controller="Home" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input asp-for="id_user" type="text" class="form-control" hidden>
+                <div class="form-group mb-3">
+                    <h6 asp-for="user_name" class="control-label">Nombre</h6>
+                    <input asp-for="user_name" class="form-control" />
+                    <span asp-validation-for="user_name" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <h6 asp-for="user_firstlastname" class="control-label">Apellido Paterno</h6>
+                    <input asp-for="user_firstlastname" class="form-control" />
+                    <span asp-validation-for="user_firstlastname" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <h6 asp-for="user_secondlastname" class="control-label">Apellido Materno</h6>
+                    <input asp-for="user_secondlastname" class="form-control" />
+                    <span asp-validation-for="user_secondlastname" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <h6 asp-for="user_email" class="control-label">Correo Electronico (No lo puedes cambiar)</h6>
+                    <input asp-for="user_email" class="form-control" readonly />
+                    <span asp-validation-for="user_email" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <h6 asp-for="user_password" class="control-label">Contraseña</h6>
+                    <input asp-for="user_password" id="pas" class="form-control" />
+                    <span asp-validation-for="user_password" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    @if(Model.user_role == 1){
+                        <input asp-for="user_role" type="radio" id="admin" value=1 checked />
+                        <label class="form-label" for="admin">Admin</label>
+                        <span asp-validation-for="user_role"></span>
+
+                        <input asp-for="user_role" type="radio" id="maestro" value=2 disabled />
+                        <label class="form-label" for="maestro">Maestro</label>
+                        <span asp-validation-for="user_role"></span>
+
+                        <input asp-for="user_role" type="radio" id="alumno" value=3  disabled />
+                        <label class="form-label" for="alumno">Alumno</label>
+                        <span asp-validation-for="user_role"></span>
+                    }else if(Model.user_role == 2){
+                        <h6>Eres un:</h6>
+                        <input asp-for="user_role" type="radio" id="maestro" value=2 checked  />
+                        <label class="form-label" for="maestro">Maestro</label>
+                        <span asp-validation-for="user_role"></span>
+
+                        
+                    }else{
+                        <h6>Eres un:</h6>
+
+                        <input asp-for="user_role" type="radio" id="alumno" value=3 checked  />
+                        <label class="form-label" for="alumno">Alumno</label>
+                        <span asp-validation-for="user_role"></span>
+                    }
+                    
+                </div>
+                <div class="form-group mb-3" >
+                    @if (Model.user_status == "False")
+                    {
+                        <h6>Tu cuenta está:</h6>
+                        <input asp-for="user_status" type="radio" id="no" value="false" checked />
+                        <label class="form-label" for="no">Inactiva</label>
+                        <span asp-validation-for="user_status"></span>
+
+                        <input asp-for="user_status" type="radio" id="yes" value="true" disabled />
+                        <label class="form-label" for="yes">Activa</label>
+                        <span asp-validation-for="user_status"></span>
+                    }
+                    else
+                    {
+                        <input asp-for="user_status" type="radio" id="no" value="false" disabled />
+                        <label class="form-label" for="no">Inactivo</label>
+                        <span asp-validation-for="user_status"></span>
+
+                        <input asp-for="user_status" type="radio" id="yes" value="true" checked />
+                        <label class="form-label" for="yes">Activo</label>
+                        <span asp-validation-for="user_status"></span>
+                    }
+
+
+
+                </div>
+
+                <div class="form-group mb-3">
+                    <input type="submit" value="Guardar" class="btn btn-primary" />
+                </div>
+            </form>
+
+        </div>
+            <div class="col"></div>
+
+    </div>
+
+    
+
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

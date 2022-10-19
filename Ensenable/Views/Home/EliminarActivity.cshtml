@@ -1,0 +1,32 @@
+﻿@model ActivityModel
+@{
+    ViewData["Title"] = "Edit Course Details Page";
+}
+
+
+<h1 style="text-align: center">Desea Eliminar esta Actividad? </h1>
+
+
+<section id="DeseaPublicar">
+    <h1 class="fw-bolder fs-5 mb-4" style="text-align:center">Recuerda que no se podra recuperar despues.</h1>
+    <div class="card" style="width:65%; margin:auto">
+        <div class="card-body">
+            <form asp-action="EliminarActivity" asp-controller="Home" method="post">
+                <div class="form-group">
+                    <label for="NameCourse">Nombre de la Actividad:</label>
+                    <input asp-for="NameActivity" type="text" class="form-control" id="txtNameActivity" readonly>
+                </div>
+                <div class="form-group">
+                    <input asp-for="IdActivity" type="hidden" class="form-control" id="txtIdActivity">
+                    <input asp-for="IdLecture" type="hidden" class="form-control" id="txtIdCourse">
+                </div>
+                <div class="container">
+                    <div class="col text-center">
+                        <button type="submit" class="btn btn-danger">Eliminar Actividad</button>
+                        <a class="btn btn-primary" href="ListarActivites">No</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

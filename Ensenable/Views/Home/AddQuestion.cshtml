@@ -1,0 +1,40 @@
+﻿@model Ensenable.Models.QuestionModel
+
+@{
+    ViewData["Title"] = "AddQuestion";
+}
+
+<h1>AddQuestion</h1>
+
+<h4>QuestionModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddQuestion" asp-controller="Home" method="post">
+           
+            <div class="form-group">
+                <label asp-for="IdActivity" class="control-label"></label>
+                <input asp-for="IdActivity" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Question" class="control-label"></label>
+                <input asp-for="Question" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="NumQuestion" class="control-label"></label>
+                <input asp-for="NumQuestion" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

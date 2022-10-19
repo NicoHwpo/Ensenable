@@ -1,0 +1,64 @@
+﻿@model LectureModel
+@{
+    ViewData["Title"] = "Edit Course Details Page";
+}
+
+<section class="py-5">
+    <div class="container px-5">
+        <h1 class="fw-bolder fs-5 mb-4">Desarrollo de la Actividad</h1>
+        <div class="card border-0 shadow rounded-3 overflow-hidden">
+            <div class="card-body p-0">
+                <div class="row gx-0">
+                    <div class="col-lg-6 col-xl-5 py-lg-5">
+                        <div class="p-4 p-md-5">
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">Paso 3</div>
+                            <div class="h2 fw-bolder">Cambia Los detalles generales de tu curso.</div>
+                            <p>Este es el ultimo paso. Crea el contenido para que el estudiante pueda comprender el tema y este preparado para el quizz. <b>¿Cual es el siguiente paso? Si ya termino de agregar todas las lecturas/videos...</b></p>
+                            <a asp-action="#" class="btn btn-primary" asp-controller="Home" asp-route-IdCourse="@Model.IdCourse ">Publica el Curso!</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-7"><div class="bg-featured-blog" style="background-image: url('https://static.helpjuice.com/helpjuice_production/uploads/upload/image/4752/direct/1597678311691-Explicit%20Knowledge.jpg')"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Campos">
+    <h1 class="fw-bolder fs-5 mb-4" style="text-align:center">Actualice la informacion sobre su Actividad</h1>
+    <div class="card" style="width:65%; margin:auto">
+        <div class="card-body">
+            <form asp-action="EditarDetallesLec" asp-controller="Home" method="post">
+                <div class="form-group">
+                    <label for="NameCourse">ID del Tema en cuestion:</label>
+                    <input asp-for="IdLecture" type="text" class="form-control" id="txtInstructions" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="NameCourse">ID de la actividad al que esta ligada el tema:</label>
+                    <input asp-for="IdCourse" type="text" class="form-control" id="txtInstructions" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="NameCourse">Nombre del Tema:</label>
+                    <input asp-for="NombreLecture" type="text" class="form-control" id="txtInstructions">
+                </div>
+                <div class="form-group">
+                    <label for="NameCourse">Link al video de YouTube:</label>
+                    <input asp-for="YtLink" type="text" class="form-control" id="txtInstructions">
+                </div>
+                <div class="form-group">
+                    <label for="NameCourse">Meta de aprendizaje de este tema:</label>
+                    <input asp-for="Purpose" type="text" class="form-control" id="txtInstructions">
+                </div>
+                <div class="form-group">
+                    <label for="NameCourse">Puntos que el almuno necesita repasar del tema:</label>
+                    <input asp-for="PreguntasApoyo" type="text" class="form-control" id="txtInstructions">
+                </div>
+                <div class="form-group">
+                    <label for="NameCourse">Informacion Extra sobre el Tema:</label>
+                    <input asp-for="Texto" type="text" class="form-control" id="txtInstructions" cols="40">
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+</section>

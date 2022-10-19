@@ -1,0 +1,319 @@
+﻿@using Ensenable.Datos
+@using System.Collections.Generic;
+@{
+    ViewData["Title"] = "Course List Page";
+}
+
+<!-- Page Content-->
+<section class="py-5">
+    <div class="container px-5">
+        <h1 class="fw-bolder fs-5 mb-4">Pagina de Cursos</h1>
+        <div class="card border-0 shadow rounded-3 overflow-hidden">
+            <div class="card-body p-0">
+                <div class="row gx-0">
+                    <div class="col-lg-6 col-xl-5 py-lg-5">
+                        <div class="p-4 p-md-5">
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                            <div class="h2 fw-bolder">Conocimiento Ilimitado.</div>
+                            <p>Explora y amplia tu conocimiento. La lista por debajo son todos los cursos listos para que puedas aprender de ellos y capacitarte para realizar cualquier actividad.</p>
+                            <a class="stretched-link text-decoration-none" href="#Tutoriales">
+                                Comienza tu aprendizaje
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-7"><div class="bg-featured-blog" style="background-image: url('https://static.helpjuice.com/helpjuice_production/uploads/upload/image/4752/direct/1597678311691-Explicit%20Knowledge.jpg')"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" id="Tutoriales">
+    <div class="container px-5">
+        <h2 class="fw-bolder fs-5 mb-4">Tutoriales</h2>
+        <div class="row gx-5">
+            <div class="col-lg-4 mb-5">
+                <div class="card h-100 shadow border-0">
+                    <img class="card-img-top" src="~/images/h_createCourse.png" alt="..." />
+                    <div class="card-body p-4">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Tutoriales</div>
+                        <a class="text-decoration-none link-dark stretched-link" href="/Home/Tutorial1"><h5 class="card-title mb-3">Como estructurar un curso</h5></a>
+                        <p class="card-text mb-0">Esta guia te muestra como puedes de inicio a fin crear el contenido de un curso nuevo, para aprovechar la plataforma lo mejor posible.</p>
+                    </div>
+                    <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                        <div class="d-flex align-items-end justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-3" src="~/images/a_sam.png" alt="..." />
+                                <div class="small">
+                                    <div class="fw-bold">Samuel Acosta</div>
+                                    <div class="text-muted">Septiembre 30, 2022 &middot; lectura de 6 min.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <div class="card h-100 shadow border-0">
+                    <img class="card-img-top" src="~/images/h_uploadCourse.png" alt="..." />
+                    <div class="card-body p-4">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Curso</div>
+                        <a class="text-decoration-none link-dark stretched-link" href="/Home/Tutorial2"><h5 class="card-title mb-3">Crear y publicar un curso</h5></a>
+                        <p class="card-text mb-0">Si ya tiene el contenido del curso que desea, es tiempo de crear el curso y publicarlo para que otras personas gozen de su conocimiento.</p>
+                    </div>
+                    <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                        <div class="d-flex align-items-end justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-3" src="~/images/a_sam.png" alt="..." />
+                                <div class="small">
+                                    <div class="fw-bold">Samuel Acosta</div>
+                                    <div class="text-muted">Septiembre 30, 2022 &middot; lectura de 6 min.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <div class="card h-100 shadow border-0">
+                    <img class="card-img-top" src="~/images/h_analitic.png" alt="..." />
+                    <div class="card-body p-4">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Seguimiento</div>
+                        <a class="text-decoration-none link-dark stretched-link" href="/Home/Tutorial3"><h5 class="card-title mb-3">Revisar cuantos alumnos estan en su curso y sus aciertos/errores.</h5></a>
+                        <p class="card-text mb-0">Esta guia te muestra como ver cuantas personas estan llevando su curso y cuales han sido sus errores y aciertos.</p>
+                    </div>
+                    <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                        <div class="d-flex align-items-end justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-3" src="~/images/a_sam.png" alt="..." />
+                                <div class="small">
+                                    <div class="fw-bold">Samuel Acosta</div>
+                                    <div class="text-muted">Septiembre 30, 2022 &middot; lectura de 6 min.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@if (ViewBag.Session == null)
+{
+    <section class="py-5">
+        <div class="container px-5">
+            <h2 class="fw-bolder fs-5">Cursos Disponibles</h2>
+            <div class="row gx-5">
+                @foreach (var item in Model)
+                {
+                    @if (item.IsPublished == "True")
+                    {
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <a asp-action="Login" asp-controller="Home">
+                                    <img class="card-img-top" src="~/images/c_default.png" alt="..." />
+                                    <div class="card-body p-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">@item.Subject </div>
+                                        <a class="text-decoration-none link-dark" href="#"><h5 class="card-title mb-3">@item.NameCourse </h5></a>
+                                        <p class="card-text mb-0">@item.Description </p>
+                                    </div>
+                                </a>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                    <div class="d-flex align-items-end justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <img class="rounded-circle me-3" src="~/images/a_default.png" alt="..." />
+                                            <div class="small">
+                                                <div class="fw-bold">@item.Author </div>
+                                                <div class="text-muted">@item.ReleaseDate </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="padding-bottom: 1rem">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <a asp-action="Login" class="btn btn-danger" asp-controller="Home">Ver Curso</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </section>
+}else{
+    UsersDatos usersDatos = new UsersDatos();
+    var oUser = usersDatos.Obtener(ViewBag.Session);
+    if(oUser.user_role == 2){
+        <div class="container pb-5 px-5">
+            <a class="btn btn-outline-dark btn-lg px-4" style="position:absolute" href="/Home/CrearCurso">Crea un cruso</a>
+        </div>
+
+
+        <section class="py-5" id="MisCursosPublicados">
+            <div class="container px-5">
+                <h2 class="fw-bolder fs-5 mb-4">Lista de Cursos Publicados</h2>
+                <div class="row gx-5">
+                    <!--Aqui van los cursos el for each, Este es solo un ejemplo-->
+                    @foreach (var item in Model)
+                    {
+                        @if (item.IsPublished == "True" && item.id_user == oUser.id_user)
+                        {
+                            <div class="col-lg-4 mb-5">
+                                <div class="card h-100 shadow border-0">
+                                    <img class="card-img-top" src="~/images/c_default.png" alt="..." />
+                                    <div class="card-body p-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">@item.Subject </div>
+                                        <a class="text-decoration-none link-dark" href="#"><h5 class="card-title mb-3">@item.NameCourse </h5></a>
+                                        <p class="card-text mb-0">@item.Description </p>
+                                    </div>
+                                    <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                        <div class="d-flex align-items-end justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <img class="rounded-circle me-3" src="~/images/a_default.png" alt="..." />
+                                                <div class="small">
+                                                    <div class="fw-bold">@item.Author </div>
+                                                    <div class="text-muted">@item.ReleaseDate </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container" style="padding-bottom: 1rem">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <a asp-action="DesPublicarCurso" class="btn btn-danger" asp-controller="Home" asp-route-IdCourse="@item.IdCourse" onclick="return confirm('¿Confirma Deshacer la Publicación?')">Despublicar Curso</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </section>
+
+        <section class="py-3" id="MisCursosNoPublicados">
+            <div class="container px-5">
+                <h2 class="fw-bolder fs-5 mb-4">Lista de Cursos No Publicados</h2>
+                <div class="row gx-5">
+                    <!--Aqui van los cursos el for each, Este es solo un ejemplo-->
+                    @foreach (var item in Model)
+                    {
+                        @if (item.IsPublished == "False" && item.id_user == oUser.id_user)
+                        {
+                            <div class="col-lg-4 mb-5">
+                                <div class="card h-100 shadow border-0">
+                                    <img class="card-img-top" src="~/images/c_workdefault.png" alt="Work In Progress Course" />
+                                    <div class="card-body p-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">@item.Subject </div>
+                                        <h5 class="card-title mb-3">@item.NameCourse </h5>
+                                        <p class="card-text mb-0">@item.Description </p>
+                                    </div>
+                                    <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                        <div class="d-flex align-items-end justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <img class="rounded-circle me-3" src="~/images/a_default.png" alt="..." />
+                                                <div class="small">
+                                                    <div class="fw-bold">@item.Author </div>
+                                                    <div class="text-muted">@item.ReleaseDate </div>
+                                                    <div class="text-muted">COURSE ID: @item.IdCourse </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col text-center">
+                                                    <a asp-action="EditarDetallesCurso" class="btn btn-primary" asp-controller="Home" asp-route-IdCourse="@item.IdCourse">Editar Curso</a>
+                                                </div>
+                                                <div class="col text-center">
+                                                    <a asp-action="PublicarCurso" class="btn btn-success" asp-controller="Home" asp-route-IdCourse="@item.IdCourse" onclick="return confirm('¿Confirma Publicar?')">Publicar Curso</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col text-center">
+                                                    <a asp-action="EliminarCurso" class="btn btn-danger" asp-controller="Home" asp-route-IdCourse="@item.IdCourse" onclick="return confirm('¿Confirma Eliminar? UNA VEZ ELIMINADO NO SE PUEDE RECUPERAR EL CURSO.')">Eliminar Curso</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </section>
+
+
+        
+    }
+    else if (oUser.user_role == 3)
+    {
+        CursoDatos cursoDatos = new CursoDatos();
+        var oSubs = cursoDatos.ListarSubscriptions(ViewBag.Session);
+        HashSet<int> Subs = new HashSet<int>();
+        foreach (var sub in oSubs){
+            Subs.Add(sub);
+        }
+        <section class="py-5">
+            <div class="container px-5">
+                <h2 class="fw-bolder fs-5">Cursos Disponibles</h2>
+                <div class="row gx-5">
+                    @foreach (var item in Model)
+                    {
+                        @if (item.IsPublished == "True")
+                        {
+                            <div class="col-lg-4 mb-5">
+                                <div class="card h-100 shadow border-0">
+                                    <div id="btn_modal_curso_cursos">
+                                        <img class="card-img-top" src="~/images/c_default.png" alt="..." />
+                                        @if(Subs.Contains(@item.IdCourse)){
+                                            <a style="text-decoration:none; background-color:#D0312D !important" asp-action="DesubscribirseCurso" asp-controller="Home" asp-route-IdCourse="@item.IdCourse" class="btn-sm"><i class="bi bi-plus-lg"></i> Desubscribirse</a>
+                                        }else{
+                                            <a style="text-decoration:none;" asp-action="SubscribirseCurso" asp-controller="Home" asp-route-IdCourse="@item.IdCourse" class="btn-sm"><i class="bi bi-plus-lg"></i> Subscribirse</a>
+                                        }
+
+                                    </div>
+                                        <div class="card-body p-4">
+                                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">@item.Subject </div>
+                                            <a class="text-decoration-none link-dark" href="#"><h5 class="card-title mb-3">@item.NameCourse </h5></a>
+                                            <p class="card-text mb-0">@item.Description </p>
+                                        </div>
+                                    
+                                    <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                        <div class="d-flex align-items-end justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <img class="rounded-circle me-3" src="~/images/a_default.png" alt="..." />
+                                                <div class="small">
+                                                    <div class="fw-bold">@item.Author </div>
+                                                    <div class="text-muted">@item.ReleaseDate </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container" style="padding-bottom: 1rem">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <a asp-action="Curso" class="btn btn-danger" asp-controller="Home" asp-route-IdCourse="@item.IdCourse">Ver Curso</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </section>
+    }
+}
+

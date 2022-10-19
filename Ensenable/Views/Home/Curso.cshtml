@@ -1,0 +1,204 @@
+﻿@using Ensenable.Datos;
+@{
+    ViewData["Title"] = "Prueba 1 Page";
+}
+@{
+    CursoDatos cursoDatos = new CursoDatos();
+    var oCurso = cursoDatos.ObtenerDetalles((int)TempData["IdCourseAct"]);
+}
+<!-- Masthead-->
+<header class="masthead">
+    <div class="container">
+        <div class="masthead-subheading">Bienvenido a tu Curso!</div>
+        <div class="masthead-heading text-uppercase">@oCurso.NameCourse</div>
+        <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">A Aprender!</a>
+    </div>
+</header>
+<!-- Services-->
+<section class="page-section" id="services">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Recibe conocimiento</h2>
+            <h3 class="section-subheading text-muted">Aprovecha tu curso al maximo.</h3>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa-solid fa-play fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3">Videos</h4>
+                <p class="text-muted">Obten acceso a videos explicativos sobre cada tema.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-regular fa-clock fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3">Flexible</h4>
+                <p class="text-muted">Lleva tu aprendizaje a tu propio ritmo, eres libre de exponerte al grado de aprendizaje que quiera.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-solid fa-gamepad fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3">Prueba tu conocimiento</h4>
+                <p class="text-muted">Si te sientes preparado, completa los quizzes en nuestra plataforma virtual interactiva.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio Grid-->
+<section class="page-section bg-light" id="portfolio">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Temas</h2>
+            <h3 class="section-subheading text-muted">Accesa al contenido del curso.</h3>
+        </div>
+        <div class="row">
+            @{
+                int ctr = 1;
+                string modal = "#portfolioModal";
+            }
+            @foreach (var lecture in Model)
+            {
+                if(lecture.IdCourse == (int)TempData["IdCourseAct"]){
+
+                string modalFinal = modal + ctr.ToString();
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="@modalFinal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="~/Images/activity.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">@lecture.NombreLecture </div>
+                            <div class="portfolio-caption-subheading text-muted">Tema @ctr</div>
+                        </div>
+                    </div>
+
+                </div>
+                ctr++;
+                }
+            }
+        </div>
+    </div>
+</section>
+<!-- About-->
+<section class="page-section" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Aprende en 3 simples pasos</h2>
+            <h3 class="section-subheading text-muted">Este es el comienzo de tu conocimiento.</h3>
+        </div>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="~/Images/ti_video.png" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>Revise el video</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Vea todo el video que se le proporciona y tome apuntes.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="~/Images/ti_text.png" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Lea cualquier texto de apoyo debajo del video..</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Este apoyo te ayudara a darte cuenta si algo todavia no lo tienes muy en claro</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="~/Images/ti_controller.png" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Pruebe su conocimiento</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Utiliza nuestra plataforma virtual interactiva que te ayude a aprender.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <a href="#">
+                        <h4>
+                            Prueba
+                            <br />
+                            Su
+                            <br />
+                            Conocimiento
+                        </h4>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- Team-->
+<section class="page-section bg-light" id="team">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Su Profesor</h2>
+            <h3 class="section-subheading text-muted">Estamos aqui para servirte.</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-4" style="margin: auto; text-align: center">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="~/Images/professor_default.png" alt="..." />
+                    <h4>Samuel Acosta</h4>
+                    <p class="text-muted">Lead Designer</p>
+                    <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/?lang=en" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@{
+    ctr = 1;
+    string modalget = "portfolioModal";
+}
+@foreach (var lecture in Model)
+{
+    if (lecture.IdCourse == (int)TempData["IdCourseAct"])
+    {
+    string modalFinal = modalget + ctr.ToString();
+    ctr++;
+    <!-- Portfolio item 1 modal popup-->
+    <div class="portfolio-modal modal fade" id="@modalFinal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">@lecture.NombreLecture</h2>
+                                <p class="item-intro text-muted">@lecture.Purpose</p>
+                                <iframe width="600" height="450" src=@lecture.YtLink title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <p>
+                                    @lecture.Texto
+                                </p>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Cerrar Tema
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+}

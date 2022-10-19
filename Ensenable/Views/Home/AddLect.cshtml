@@ -1,0 +1,47 @@
+﻿@model Ensenable.Models.LectureModel
+
+@{
+    ViewData["Title"] = "AddLect";
+}
+
+<h1>AddLect</h1>
+
+<h4>LectureModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddLect" asp-controller="Home" method="post">
+            <div class="form-group">
+                <label asp-for="IdCourse" class="control-label"></label>
+                <input asp-for="IdCourse" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreLecture" class="control-label"></label>
+                <input asp-for="NombreLecture" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="YtLink" class="control-label"></label>
+                <input asp-for="YtLink" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Purpose" class="control-label"></label>
+                <input asp-for="Purpose" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="PreguntasApoyo" class="control-label"></label>
+                <input asp-for="PreguntasApoyo" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Texto" class="control-label"></label>
+                <input asp-for="Texto" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

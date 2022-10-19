@@ -1,0 +1,53 @@
+﻿@using Newtonsoft.Json;
+
+@{
+    ViewData["Title"] = "List Activities";
+}
+<body>
+    <div class="container">
+
+
+        <h1>Listar</h1>
+        <a asp-action="AddAct" asp-controller="Home" asp-route-IdLecture="@TempData["IdLectureAct"]" class="btn btn-success"><i class="bi bi-plus-square"></i> Insertar act</a>
+
+        <div class="card" style="width:100%">
+
+            <table>
+                <thead class="btn-primary">
+                    <tr>
+                        <th>Id act</th>
+                        <th>id lect </th>
+                        <th>nombre act</th>
+                        <th>Instructions</th>
+                        <th>NumQuestions</th>
+                        <th>NumActivity</th>
+                        <th>editar lec</th>
+                        <th>agregar actv</th>
+                        <th>eliminar lec</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        if (item.IdLecture == (int)TempData["IdLectureAct"])
+                        {
+                            <tr>
+                                <td> @item.IdActivity  </td>
+                                <td> @item.IdLecture </td>
+                                <td> @item.NameActivity </td>
+                                <td> @item.Instructions </td>
+                                <td> @item.NumQuestions </td>
+                                <td> @item.NumActivity </td>
+
+                                <td> <a asp-action="Editar" class="btn btn-success" asp-controller="Mantenedor" asp-route-IdActivity="@item.IdActivity "><i class="bi bi-x-square"></i> Editar</a> </td>
+                                <td> <a asp-action="ListQuestions" class="btn btn-success" asp-controller="Home" asp-route-IdActivity="@item.IdActivity "><i class="bi bi-x-square"></i> agregar preg</a> </td>
+                                <td> <a asp-action="Eliminar" class="btn btn-danger" asp-controller="Mantenedor" asp-route-IdActivity="@item.IdActivity "><i class="bi bi-x-square"></i> Eliminar</a> </td>
+
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

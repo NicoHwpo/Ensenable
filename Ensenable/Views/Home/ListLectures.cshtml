@@ -1,0 +1,57 @@
+﻿@using Newtonsoft.Json;
+
+@{
+    ViewData["Title"] = "List Lectures";
+}
+
+
+<body>
+    <div class="container">
+
+
+        <h1>Listar</h1>
+        <a asp-action="AddLect" asp-controller="Home" asp-route-IdCourse="@TempData["IdCourseAct"]" class="btn btn-success"><i class="bi bi-plus-square"></i> Insertar Actividad</a>
+
+        <div class="card" style="width:100%">
+
+            <table>
+                <thead class="btn-primary">
+                    <tr>
+                        <th>Id lec</th>
+                        <th>id curso </th>
+                        <th>nombre</th>
+                        <th>yt link</th>
+                        <th>purp</th>
+                        <th>preg ap</th>
+                        <th>text1</th>
+                        <th>editar lec</th>
+                        <th>agregar actv</th>
+                        <th>eliminar lec</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        if (item.IdCourse == (int)TempData["IdCourseAct"]){
+                            <tr>
+                                <td> @item.IdLecture  </td>
+                                <td> @item.IdCourse </td>
+                                <td> @item.NombreLecture </td>
+                                <td> @item.YtLink </td>
+                                <td> @item.Purpose </td>
+                                <td> @item.PreguntasApoyo </td>
+                                <td>@item.Texto</td>
+
+                                <td> <a asp-action="Editar" class="btn btn-success" asp-controller="Mantenedor" asp-route-IdLecture="@item.IdLecture "><i class="bi bi-x-square"></i> Editar</a> </td>
+                                <td> <a asp-action="ListActivities" class="btn btn-success" asp-controller="Home" asp-route-IdLecture="@item.IdLecture "><i class="bi bi-x-square"></i> Agregar act</a> </td>
+                                <td> <a asp-action="Eliminar" class="btn btn-danger" asp-controller="Mantenedor" asp-route-IdLecture="@item.IdLecture "><i class="bi bi-x-square"></i> Eliminar</a> </td>
+
+                            </tr>
+                        }
+                        
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

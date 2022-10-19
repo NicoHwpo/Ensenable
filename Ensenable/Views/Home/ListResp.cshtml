@@ -1,0 +1,48 @@
+﻿@using Ensenable.Datos;
+@{
+    ViewData["Title"] = "List Resp";
+}
+<body>
+    <div class="container">
+
+
+        <h1>Listar</h1>
+        <a asp-action="AddAnswer" asp-controller="Home" asp-route-IdQuestion="@TempData["IdQuestionAct"]" class="btn btn-success"><i class="bi bi-plus-square"></i> Insertar answer</a>
+
+        <div class="card" style="width:100%">
+
+            <table>
+                <thead class="btn-primary">
+                    <tr>
+                        <th>Id answer</th>
+                        <th>id quest </th>
+                        <th>answ</th>
+                        <th>is correct</th>
+                        <th>num ans </th>
+                        <th>editar </th>
+                        <th>eliminar lec</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        if (item.IdQuestion == (int)TempData["IdQuestionAct"])
+                        {
+
+                            <tr>
+                                <td> @item.IdAnswer  </td>
+                                <td> @item.IdQuestion </td>
+                                <td> @item.Answer </td>
+                                <td> @item.IsCorrect </td>
+                                <td> @item.NumAnswer </td>
+                                <td> <a asp-action="Editar" class="btn btn-success" asp-controller="Mantenedor" asp-route-IdAnswer="@item.IdAnswer"><i class="bi bi-x-square"></i> Editar</a> </td>
+                                <td> <a asp-action="Eliminar" class="btn btn-danger" asp-controller="Mantenedor" asp-route-IdAnswer="@item.IdAnswer"><i class="bi bi-x-square"></i> Eliminar</a> </td>
+
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,49 @@
+﻿@using Ensenable.Datos;
+@{
+    ViewData["Title"] = "List ques";
+}
+<body>
+    <div class="container">
+
+
+        <h1>Listar</h1>
+        <a asp-action="AddQuestion" asp-controller="Home" asp-route-IdActivity="@TempData["IdActivityAct"]" class="btn btn-success"><i class="bi bi-plus-square"></i> Insertar question</a>
+
+        <div class="card" style="width:100%">
+
+            <table>
+                <thead class="btn-primary">
+                    <tr>
+                        <th>Id quest</th>
+                        <th>id act </th>
+                        <th>question</th>
+                        <th>num question</th>
+                        <th>editar lec</th>
+                        <th>agregar resp</th>
+                        <th>eliminar lec</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        if (item.IdActivity == (int)TempData["IdActivityAct"]){
+
+
+                        <tr>
+                            <td> @item.IdQuestion  </td>
+                            <td> @item.IdActivity </td>
+                            <td> @item.Question </td>
+                            <td> @item.NumQuestion </td>
+                            <td> <a asp-action="Editar" class="btn btn-success" asp-controller="Mantenedor" asp-route-IdQuestion="@item.IdQuestion"><i class="bi bi-x-square"></i> Editar</a> </td>
+                            <td> <a asp-action="ListResp" class="btn btn-success" asp-controller="Home" asp-route-IdQuestion="@item.IdQuestion"><i class="bi bi-x-square"></i> Agregar resp</a> </td>
+                            <td> <a asp-action="Eliminar" class="btn btn-danger" asp-controller="Mantenedor" asp-route-IdQuestion="@item.IdQuestion"><i class="bi bi-x-square"></i> Eliminar</a> </td>
+
+                        </tr>
+                        }
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,60 @@
+﻿@model Ensenable.Models.CourseModel
+@using Ensenable.Datos;
+@{
+    ViewData["Title"] = "Course List Page";
+}
+
+<section class="py-5">
+    <div class="container px-5">
+        <h1 class="fw-bolder fs-5 mb-4">Crea tu curso</h1>
+        <div class="card border-0 shadow rounded-3 overflow-hidden">
+            <div class="card-body p-0">
+                <div class="row gx-0">
+                    <div class="col-lg-6 col-xl-5 py-lg-5">
+                        <div class="p-4 p-md-5">
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                            <div class="h2 fw-bolder">Facil y sencillo.</div>
+                            <p>Llena los campos que se presentan a continuacion. Tu decides cuantos temas habra, cada tema tiene su quiz con preguntas y respuestas que tu creas.</p>
+                            <a class="stretched-link text-decoration-none" href="#Campos">
+                                Comienza a crear
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-7"><div class="bg-featured-blog" style="background-image: url('https://static.helpjuice.com/helpjuice_production/uploads/upload/image/4752/direct/1597678311691-Explicit%20Knowledge.jpg')"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Campos" class="mb-3">
+    <h1 class="fw-bolder fs-5 mb-4" style="text-align:center">Llena los siguientes campos requeridos</h1>
+    <div class="card" style="width:65%; margin:auto">
+        <div class="card-body">
+            <form asp-action="CrearCurso" asp-controller="Home" method="post">
+                <div class="form-group">
+                    <label for="NameCourse">Nombre del Curso:</label>
+                    <input asp-for="NameCourse" type="text" class="form-control" id="txtNameCourse" required>
+                </div>
+                <div class="form-group">
+                    <label for="NameCourse">Nombre del Sujeto :</label>
+                    <input asp-for="Subject" type="text" class="form-control" id="txtSubject" required>
+                </div>
+                <div class="form-group">
+                    <label for="NameCourse">Descripcion Breve del Curso:</label>
+                    <input asp-for="Description" type="text" class="form-control" id="txtDescription" required>
+                </div>
+                @{
+                    UsersDatos usersDatos = new UsersDatos();
+                    var oUser = usersDatos.Obtener(ViewBag.Session);
+                }
+                <div class="form-group">
+                    <label asp-for="Author">Autor del Curso:</label>
+                    <input asp-for="Author" type="text" class="form-control" id="txtAuthor" value="@oUser.user_name @oUser.user_firstlastname" readonly required>
+                </div>
+                <button type="submit" class="btn btn-primary">Crear Curso</button>
+            </form>
+        </div>
+    </div>
+</section>
